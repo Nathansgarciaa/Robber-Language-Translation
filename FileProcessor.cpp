@@ -1,6 +1,6 @@
 #include "FileProcessor.h"
 #include <fstream>
-#include "Translator.h" 
+
 //constructor
 FileProcessor::FileProcessor() {
     
@@ -15,14 +15,15 @@ void FileProcessor::processFile(string input, string output) {
     string inputLine;//making a string to assign the text of input to 
     string originalText; //putting original input to file
     string outputTranslation;//making an output string translated that will go to the output file
-    Translator translator;//created translator obect to call its methods
+    translator = new Translator();;//created translator pointer object to call its methods
+    
     if (!fin.is_open()) {
     cerr << "Failed to open input file." << endl;//checks if the file is even open
     return;
 }
     while (getline(fin, inputLine)) {//getline gets the lines by lines from input and assigns to input line, iterating til lines are done
         originalText += inputLine;
-        outputTranslation += translator.translateEnglishWord(inputLine);//adds the translated input lines using this method to the output
+        outputTranslation += translator->translateEnglishWord(inputLine);//adds the translated input lines using this method to the output
     }
     fin.close();//have to close the input file
 

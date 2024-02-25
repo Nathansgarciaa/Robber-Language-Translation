@@ -1,5 +1,6 @@
 #ifndef TRANSLATOR_H
 #define TRANSLATOR_H
+#include "Model.h"
 #include <iostream>
 #include <string>
 using namespace std;
@@ -13,7 +14,10 @@ class Translator{
         string translateEnglishSentence(string englishSentence);
         //created isVowel to just make a boolean(true or false) checking if letter is a vowel or not
         bool isVowel(char c);
-  
+        
+    private:   
+        Model *model;//create pointer 
+
 }
 ;
 
