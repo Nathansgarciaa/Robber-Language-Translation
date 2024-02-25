@@ -6,14 +6,14 @@ using namespace std;
 
 class Translator{
     public:
-        Translator();
-        ~Translator();
+        Translator();//construcor
+        ~Translator();//destrucotr
+        //methods
         string translateEnglishWord(string englishWord);
         string translateEnglishSentence(string englishSentence);
+        //created isVowel to just make a boolean(true or false) checking if letter is a vowel or not
         bool isVowel(char c);
   
-        //Model *myModel
-        //Translator:: { model = new model}
 }
 ;
 
