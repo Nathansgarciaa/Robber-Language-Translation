@@ -7,7 +7,7 @@ FileProcessor::FileProcessor() {
 }
 
 FileProcessor::~FileProcessor() {//destructor
-   
+   delete[] translator;
 }
 //processFile takes in input file and translates to an output file
 void FileProcessor::processFile(string input, string output) {

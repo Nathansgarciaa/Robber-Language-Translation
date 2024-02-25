@@ -7,7 +7,7 @@ Translator::Translator(){//constructor
 }
 
 Translator::~Translator(){//destructor
-
+    delete[] model;
 }
 bool Translator::isVowel(char c) {//checks if letter is equal to upper and lower case AEIOU(vowels)
     return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'|| c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U';
