@@ -37,7 +37,7 @@ void FileProcessor::processFile(string input, string output) {
     fout << "<h1> Lebron's The Decision in Robber Language </h1>" << endl;
     fout << "<body>" << endl;
     fout << "<strong>" << originalText << "</strong>" << endl;//strong created bold og text
-    fout << "<p>" << outputTranslation << "</p>" << endl;
+    fout << "<p>" << "<em>" << outputTranslation << "</em>" << "</p>" << endl; //em makes it italicized
     fout << "</body>" << endl;
     fout << "</html>";
     fout.close(); // Closes the output file
